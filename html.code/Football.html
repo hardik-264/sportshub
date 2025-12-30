@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Hub - Live Scores & News</title>
+  <meta name="description" content="Live football scores, match reports, and breaking football news." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css.code/Sports.css" />
+  <link rel="stylesheet" href="/css.code/Football.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="Sports.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        <span class="logo-text">SPORTS<span class="logo-highlight">HUB</span></span>
+      </a>
+      <nav class="nav">
+        <a href="Sports.html" class="nav-link">Home</a>
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Sports ▼</button>
+          <div class="dropdown-menu">
+            <a href="Cricket.html"><i class="fas fa-cricket"></i> Cricket</a>
+            <a href="Football.html" style="color: var(--primary); font-weight:700;"><i class="fas fa-football"></i> Football</a>
+            <a href="Sports.html"><i class="fas fa-hockey-puck"></i> Hockey</a>
+            <a href="Sports.html"><i class="fas fa-shuttlecock"></i> Badminton</a>
+            <a href="Sports.html"><i class="fas fa-tennis"></i> Tennis</a>
+            <a href="Sports.html"><i class="fas fa-trophy"></i> Other Sports</a>
+          </div>
+        </div>
+        <a href="Sports.html" class="nav-link">News</a>
+        <a href="Sports.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search teams, players, news...">
+        <button class="search-btn" onclick="handleSearch()"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="auth-buttons">
+        <a href="#login" class="btn btn-outline">Log in</a>
+        <a href="#signup" class="btn btn-primary">Sign up</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="Sports.html">Home</a>
+    <a href="Cricket.html">Cricket</a>
+    <a href="Football.html">Football</a>
+    <a href="Sports.html">Hockey</a>
+    <a href="Sports.html">Tennis</a>
+    <a href="Sports.html">News</a>
+    <a href="Sports.html">Contact</a>
+    <div class="mobile-auth">
+      <a href="#login" class="btn btn-outline">Log in</a>
+      <a href="#signup" class="btn btn-primary">Sign up</a>
+    </div>
+  </div>
+
+  <section class="football-hero">
+    <h1><i class="fas fa-football"></i> FOOTBALL HUB</h1>
+    <p>Live Scores, Fixtures & Latest Football News</p>
+  </section>
+
+  <section class="football-stats">
+    <div class="stat-card"><div class="stat-number">428</div><div class="stat-label">Live Matches</div></div>
+    <div class="stat-card"><div class="stat-number">120</div><div class="stat-label">Leagues</div></div>
+    <div class="stat-card"><div class="stat-number">14M</div><div class="stat-label">Fans Online</div></div>
+    <div class="stat-card"><div class="stat-number">98</div><div class="stat-label">Countries</div></div>
+  </section>
+
+  <section class="matches-section">
+    <h2><span style="width:12px;height:12px;background:#ef4444;border-radius:50%;display:inline-block;margin-right:8px"></span>Live Matches</h2>
+    <div class="match-cards">
+      <div class="match-card">
+        <span class="match-format">UEFA</span>
+        <div class="team-score"><span class="team-name">Manchester United</span><span class="team-goals">2</span></div>
+        <div class="team-score"><span class="team-name">Liverpool</span><span class="team-goals">1</span></div>
+        <div class="match-status"><span class="status-live">● LIVE</span><div style="margin-top:8px">78' - Red card shown</div></div>
+      </div>
+
+      <div class="match-card">
+        <span class="match-format">PREMIER</span>
+        <div class="team-score"><span class="team-name">Arsenal</span><span class="team-goals">1</span></div>
+        <div class="team-score"><span class="team-name">Chelsea</span><span class="team-goals">1</span></div>
+        <div class="match-status"><span class="status-live">● LIVE</span><div style="margin-top:8px">45+2' - Half time</div></div>
+      </div>
+
+      <div class="match-card">
+        <span class="match-format">FRIENDLY</span>
+        <div class="team-score"><span class="team-name">Brazil</span><span class="team-goals">-</span></div>
+        <div class="team-score"><span class="team-name">Argentina</span><span class="team-goals">-</span></div>
+        <div class="match-status"><span class="status-upcoming">UPCOMING</span><div style="margin-top:8px">Starts in 3 hours</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="matches-section" style="background:var(--surface)">
+    <div style="max-width:1280px;margin:0 auto">
+      <h2>Recently Completed</h2>
+      <div class="match-cards">
+        <div class="match-card"><span class="match-format">EPL</span><div class="team-score"><span class="team-name">Tottenham</span><span class="team-goals">3</span></div><div class="team-score"><span class="team-name">Man City</span><span class="team-goals">3</span></div><div class="match-status"><span class="status-completed">FULL TIME</span><div style="margin-top:8px">3-3 draw</div></div></div>
+        <div class="match-card"><span class="match-format">LA LIGA</span><div class="team-score"><span class="team-name">Real Madrid</span><span class="team-goals">2</span></div><div class="team-score"><span class="team-name">Barcelona</span><span class="team-goals">1</span></div><div class="match-status"><span class="status-completed">COMPLETED</span><div style="margin-top:8px">Real win 2-1</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="matches-section football-news">
+    <div class="container">
+      <h2>Latest Football News</h2>
+      <div class="news-articles">
+        <article class="news-article"><img class="article-image" src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=400&q=80" alt="Football"><div class="article-content"><h3 class="article-title">Star Striker Transfers to New Club</h3><p class="article-excerpt">Top transfer headlines as clubs prepare for the window...</p><span class="article-date">3 hours ago</span></div></article>
+        <article class="news-article"><img class="article-image" src="https://images.unsplash.com/photo-1505672678657-cc7037095e2c?w=400&q=80" alt="Football"><div class="article-content"><h3 class="article-title">Manager Sacked After Poor Run</h3><p class="article-excerpt">Club decides to part ways with manager after string of losses...</p><span class="article-date">6 hours ago</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container"><p>© 2025 SportHub Football. All rights reserved.</p><div class="footer-links"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms</a><a href="#contact">Contact</a></div></div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu(){ document.getElementById('mobileMenu').classList.toggle('active'); }
+  </script>
+</body>
+</html>

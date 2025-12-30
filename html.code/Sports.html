@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Hub - Live Scores, News & Updates</title>
+  <meta name="description" content="Your ultimate destination for live sports scores, breaking news, and comprehensive coverage of Cricket, Football, Hockey, Tennis, and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css.code/Sports.css" />
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        <span class="logo-text">SPORTS<span class="logo-highlight">HUB</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Sports ▼</button>
+          <div class="dropdown-menu">
+            <a href="Cricket.html"><i class="fas fa-cricket"></i> Cricket</a>
+            <a href="Football.html"><i class="fas fa-football"></i> Football</a>
+             <a href="Hockey.html"><i class="fas fa-hockey-puck"></i> Hockey</a>
+             <a href="Badminton.html"><i class="fas fa-shuttlecock"></i> Badminton</a>
+             <a href="Tennis.html"><i class="fas fa-tennis"></i> Tennis</a>
+            <a href="#other"><i class="fas fa-trophy"></i> Other Sports</a>
+          </div>
+        </div>
+        <a href="#news" class="nav-link">News</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="search-bar" id="siteSearch">
+        <input type="text" class="search-input" placeholder="Search teams, players, news...">
+        <button class="search-btn" type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="auth-buttons">
+        <a href="Login.html" class="btn btn-outline">Log in</a>
+        <a href="Signup.html" class="btn btn-primary">Sign up</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="Cricket.html">Cricket</a>
+    <a href="Football.html">Football</a>
+    <a href="Hockey.html">Hockey</a>
+    <a href="Tennis.html">Tennis</a>
+    <a href="#news">News</a>
+    <a href="Contact.html">Contact</a>
+    <div class="mobile-auth">
+      <a href="#login" class="btn btn-outline">Log in</a>
+      <a href="#signup" class="btn btn-primary">Sign up</a>
+    </div>
+  </div>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider" id="heroSlider">
+    <div class="slides-container">
+      <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1920&q=80" alt="Cricket Stadium" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">LIVE NOW</span>
+          <h1>India vs Australia</h1>
+          <p>World Cup Final - Don't miss the action!</p>
+          <a href="#" class="btn btn-primary">Watch Live</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=1920&q=80" alt="Football Match" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">UPCOMING</span>
+          <h1>Champions League</h1>
+          <p>Semi-finals start this weekend</p>
+          <a href="#" class="btn btn-primary">View Schedule</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&q=80" alt="Tennis Court" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">BREAKING</span>
+          <h1>Wimbledon 2024</h1>
+          <p>Draw announced - See who plays who</p>
+          <a href="#" class="btn btn-primary">Full Draw</a>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    <!-- <div class="slider-dots" id="sliderDots"></div> -->
+  </section>
+
+  <!-- Live Scores -->
+  <section class="live-scores">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="live-dot"></span> Live Scores</h2>
+        <a href="#" class="view-all">View All →</a>
+      </div>
+      <div class="scores-scroll" id="scoresScroll">
+        <div class="score-card">
+          <div class="match-info">
+            <span class="league">IPL 2024</span>
+            <span class="status live">● LIVE</span>
+          </div>
+          <div class="teams">
+            <div class="team">
+              <span class="team-name">Mumbai Indians</span>
+              <span class="score">185/4</span>
+            </div>
+            <div class="team">
+              <span class="team-name">Chennai Super Kings</span>
+              <span class="score">142/3</span> 
+            </div>
+          </div>
+          <div class="match-detail">CSK need 44 runs in 24 balls</div>
+        </div>
+        <div class="score-card">
+          <div class="match-info">
+            <span class="league">Premier League</span>
+            <span class="status live">● LIVE</span>
+          </div>
+          <div class="teams">
+            <div class="team">
+              <span class="team-name">Manchester United</span>
+              <span class="score">2</span>
+            </div>
+            <div class="team">
+              <span class="team-name">Liverpool</span>
+              <span class="score">1</span>
+            </div>
+          </div>
+          <div class="match-detail">78' minute</div>
+        </div>
+        <div class="score-card">
+          <div class="match-info">
+            <span class="league">ATP Masters</span>
+            <span class="status upcoming">UPCOMING</span>
+          </div>
+          <div class="teams">
+            <div class="team">
+              <span class="team-name">Novak Djokovic</span>
+              <span class="score">-</span>
+            </div>
+            <div class="team">
+              <span class="team-name">Carlos Alcaraz</span>
+              <span class="score">-</span>
+            </div>
+          </div>
+          <div class="match-detail">Starts in 2 hours</div>
+        </div>
+        <div class="score-card">
+          <div class="match-info">
+            <span class="league">Hockey World Cup</span>
+            <span class="status finished">FINISHED</span>
+          </div>
+          <div class="teams">
+            <div class="team">
+              <span class="team-name">India</span>
+              <span class="score">3</span>
+            </div>
+            <div class="team">
+              <span class="team-name">Netherlands</span>
+              <span class="score">2</span>
+            </div>
+          </div>
+          <div class="match-detail">India wins!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured News -->
+  <section class="featured-news">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured News</h2>
+        <a href="#" class="view-all">All News →</a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card featured">
+          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800&q=80" alt="Cricket News" />
+          <div class="news-overlay"></div>
+          <div class="news-content">
+            <span class="news-category">Cricket</span>
+            <h3>Virat Kohli Announces Retirement from T20 Internationals</h3>
+            <p>The legendary batsman calls it a day after a stellar career...</p>
+            <div class="news-meta">
+              <span>2 hours ago</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+        <div class="news-list">
+          <article class="news-item">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=200&q=80" alt="Football" />
+            <div class="news-item-content">
+              <span class="news-category">Football</span>
+              <h4>Premier League Title Race Heats Up</h4>
+              <span class="news-time">4 hours ago</span>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=200&q=80" alt="Tennis" />
+            <div class="news-item-content">
+              <span class="news-category">Tennis</span>
+              <h4>Sinner Claims World No. 1 Ranking</h4>
+              <span class="news-time">6 hours ago</span>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=200&q=80" alt="Hockey" />
+            <div class="news-item-content">
+              <span class="news-category">Hockey</span>
+              <h4>India Qualifies for Olympics 2024</h4>
+              <span class="news-time">8 hours ago</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sports Categories -->
+  <section class="sports-categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore Sports</h2>
+      </div>
+      <div class="categories-grid">
+        <a href="Cricket.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=400&q=80" alt="Cricket" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-cricket"></i></span>
+            <h3>Cricket</h3>
+            <span class="category-count">24 Live Events</span>
+          </div>
+        </a>
+        <a href="Football.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80" alt="Football" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-football"></i></span>
+            <h3>Football</h3>
+            <span class="category-count">18 Live Events</span>
+          </div>
+        </a>
+        <a href="Hockey.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=400&q=80" alt="Hockey" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-hockey-puck"></i></span>
+            <h3>Hockey</h3>
+            <span class="category-count">8 Live Events</span>
+          </div>
+        </a>
+        <a href="Tennis.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=400&q=80" alt="Tennis" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-tennis"></i></span>
+            <h3>Tennis</h3>
+            <span class="category-count">12 Live Events</span>
+          </div>
+        </a>
+        <a href="Badminton.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=400&q=80" alt="Badminton" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-shuttlecock"></i></span>
+            <h3>Badminton</h3>
+            <span class="category-count">6 Live Events</span>
+          </div>
+        </a>
+        <a href="#other" class="category-card">
+          <img src="https://images.unsplash.com/photo-1461896836934- voices-4?w=400&q=80" alt="More Sports" />
+          <div class="category-overlay"></div>
+          <div class="category-content">
+            <span class="category-icon"><i class="fas fa-trophy"></i></span>
+            <h3>More Sports</h3>
+            <span class="category-count">50+ Events</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+            <span class="logo-text">SPORTS<span class="logo-highlight">HUB</span></span>
+          </a>
+          <p>Your ultimate destination for live sports scores, breaking news, and comprehensive coverage.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Live Scores</a>
+          <a href="#">News</a>
+          <a href="#">Schedule</a>
+        </div>
+        <div class="footer-links">
+          <h4>Sports</h4>
+          <a href="#">Cricket</a>
+          <a href="#">Football</a>
+          <a href="#">Hockey</a>
+          <a href="#">Tennis</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Get the latest sports updates</p>
+          <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Sports Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  
+<script>
+
+
+
+
+const express = require('express');
+const axios = require('axios');
+const cors = require('cors');
+
+const app = express();
+app.use(cors()); // Allows your frontend to talk to this backend
+
+// Your secret key stays here on the server
+const API_KEY = "YOUR_REAL_SPORTS_API_KEY"; 
+const BASE_URL = "https://v3.football.api-sports.io";
+
+// Define your endpoint
+app.get('/live-scores', async (req, res) => {
+    try {
+        const response = await axios.get(`${BASE_URL}/fixtures?live=all`, {
+            headers: {
+                'x-rapidapi-key': API_KEY,
+                'x-rapidapi-host': 'v3.football.api-sports.io'
+            }
+        });
+        res.json(response.data); // Send data to your frontend
+    } catch (error) {
+        res.status(500).json({ error: "Failed to fetch data" });
+    }
+});
+
+app.listen(3000, () => {
+    console.log('API running on http://localhost:3000');
+});
+
+let currentSlide = 0;
+let slideInterval;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+// Initialize slider
+function initSlider() {
+  createDots();
+  startAutoSlide();
+  showSlide(0);
+}
+
+function createDots() {
+  const dotsContainer = document.getElementById('sliderDots');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+  
+  document.querySelectorAll('.slider-dots .dot').forEach((dot, i) => {
+    dot.classList.remove('active');
+    if (i === index) dot.classList.add('active');
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+  resetAutoSlide();
+}
+
+function startAutoSlide() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
+
+function resetAutoSlide() {
+  clearInterval(slideInterval);
+  startAutoSlide();
+}
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('active');
+}
+
+// Search functionality
+function handleSearch() {
+  const searchInput = document.querySelector('.search-input');
+  const query = searchInput.value.trim();
+  
+  if (query) {
+    // You can add API call here to fetch search results
+    console.log('Searching for:', query);
+    alert(`Searching for: ${query}`);
+    // In a real app, you would redirect to a search results page
+    // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+  }
+}
+
+// Allow Enter key to trigger search
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.querySelector('.search-input');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        handleSearch();
+      }
+    });
+  }
+});
+
+// Mobile search toggle: show icon-only initially, expand on tap
+function toggleMobileSearch(open) {
+  const searchBar = document.getElementById('siteSearch');
+  if (!searchBar) return;
+  const isOpen = searchBar.classList.contains('open');
+  if (typeof open === 'boolean') {
+    if (open) searchBar.classList.add('open'); else searchBar.classList.remove('open');
+  } else {
+    searchBar.classList.toggle('open');
+  }
+
+  if (searchBar.classList.contains('open')) {
+    const input = searchBar.querySelector('.search-input');
+    if (input) {
+      input.style.width = '100%';
+      input.style.opacity = '1';
+      setTimeout(() => input.focus(), 50);
+    }
+  } else {
+    const input = searchBar.querySelector('.search-input');
+    if (input) {
+      input.style.width = '';
+      input.style.opacity = '0';
+      input.blur();
+    }
+  }
+}
+
+// Attach click handler for mobile behavior
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('#siteSearch .search-btn');
+  if (!btn) return;
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      toggleMobileSearch();
+    } else {
+      handleSearch();
+    }
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', function(e) {
+    const searchBar = document.getElementById('siteSearch');
+    if (!searchBar) return;
+    if (window.innerWidth > 768) return;
+    if (!searchBar.contains(e.target) && searchBar.classList.contains('open')) {
+      toggleMobileSearch(false);
+    }
+  });
+});
+
+// Newsletter subscription
+function subscribeNewsletter(event) {
+  event.preventDefault();
+  const email = event.target.querySelector('input').value;
+  alert(`Thanks for subscribing with ${email}!`);
+  event.target.reset();
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 100) {
+    header.style.background = 'rgba(15, 23, 42, 0.98)';
+  } else {
+    header.style.background = 'rgba(15, 23, 42, 0.95)';
+  }
+});
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', initSlider);
+
+</script>
+
+</body>
+</html>

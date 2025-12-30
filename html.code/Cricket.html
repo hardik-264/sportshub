@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Hub - Live Scores, Matches & Updates</title>
+  <meta name="description" content="Your ultimate destination for live cricket scores, breaking news, and comprehensive coverage of T20, ODI, Test Cricket, and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css.code/Sports.css" />
+  <link rel="stylesheet" href="/css.code/Cricket.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="Sports.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        <span class="logo-text">SPORTS<span class="logo-highlight">HUB</span></span>
+      </a>
+      <nav class="nav">
+        <a href="Sports.html" class="nav-link">Home</a>
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Sports ▼</button>
+          <div class="dropdown-menu">
+            <a href="Cricket.html" style="color: var(--primary); font-weight: 700;"><i class="fas fa-cricket"></i> Cricket</a>
+            <a href="Sports.html"><i class="fas fa-football"></i> Football</a>
+            <a href="Sports.html"><i class="fas fa-hockey-puck"></i> Hockey</a>
+            <a href="Sports.html"><i class="fas fa-shuttlecock"></i> Badminton</a>
+            <a href="Sports.html"><i class="fas fa-tennis"></i> Tennis</a>
+            <a href="Sports.html"><i class="fas fa-trophy"></i> Other Sports</a>
+          </div>
+        </div>
+        <a href="Sports.html" class="nav-link">News</a>
+        <a href="Sports.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search teams, players, news...">
+        <button class="search-btn" onclick="handleSearch()"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="auth-buttons">
+        <a href="#login" class="btn btn-outline">Log in</a>
+        <a href="#signup" class="btn btn-primary">Sign up</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="Sports.html">Home</a>
+    <a href="Cricket.html"><i class="fad fa-cricket"></i> Cricket</a>
+    <a href="Sports.html"><i class="fas fa-football"></i> Football</a>
+    <a href="Sports.html"><i class="fas fa-hockey-puck"></i> Hockey</a>
+    <a href="Sports.html"><i class="fas fa-tennis"></i> Tennis</a>
+    <a href="Sports.html">News</a>
+    <a href="Sports.html">Contact</a>
+    <div class="mobile-auth">
+      <a href="#login" class="btn btn-outline">Log in</a>
+      <a href="#signup" class="btn btn-primary">Sign up</a>
+    </div>
+  </div>
+
+  <!-- Cricket Hero Section -->
+  <section class="cricket-hero">
+    <h1><i class="fas fa-cricket"></i> CRICKET HUB</h1>
+    <p>Live Scores, Match Updates & Breaking Cricket News</p>
+  </section>
+
+  <!-- Cricket Statistics -->
+  <section class="cricket-stats">
+    <div class="stat-card">
+      <div class="stat-number">1,248</div>
+      <div class="stat-label">Active Matches</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">89</div>
+      <div class="stat-label">Teams</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">5.2M</div>
+      <div class="stat-label">Active Fans</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">42</div>
+      <div class="stat-label">Countries</div>
+    </div>
+  </section>
+
+  <!-- Live & Upcoming Matches -->
+  <section class="cricket-matches">
+    <h2><span style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Live Matches</h2>
+    <div class="match-cards">
+      <!-- Live Match 1 -->
+      <div class="match-card">
+        <span class="match-format t20">T20 INTERNATIONAL</span>
+        <div class="team-score">
+          <span class="team-name">India</span>
+          <span class="team-runs">142/3 (15.4 ov)</span>
+        </div>
+        <div class="team-score">
+          <span class="team-name">Australia</span>
+          <span class="team-runs">-</span>
+        </div>
+        <div class="match-status">
+          <span class="status-badge status-live">● LIVE</span>
+          <div style="margin-top: 8px;">India batting - 4 overs remaining</div>
+        </div>
+      </div>
+
+      <!-- Live Match 2 -->
+      <div class="match-card">
+        <span class="match-format odi">ODI</span>
+        <div class="team-score">
+          <span class="team-name">England</span>
+          <span class="team-runs">285/7 (50 ov)</span>
+        </div>
+        <div class="team-score">
+          <span class="team-name">Pakistan</span>
+          <span class="team-runs">142/4 (28 ov)</span>
+        </div>
+        <div class="match-status">
+          <span class="status-badge status-live">● LIVE</span>
+          <div style="margin-top: 8px;">Pakistan chasing - 22 overs remaining</div>
+        </div>
+      </div>
+
+      <!-- Upcoming Match -->
+      <div class="match-card">
+        <span class="match-format test">TEST</span>
+        <div class="team-score">
+          <span class="team-name">South Africa</span>
+          <span class="team-runs">-</span>
+        </div>
+        <div class="team-score">
+          <span class="team-name">West Indies</span>
+          <span class="team-runs">-</span>
+        </div>
+        <div class="match-status">
+          <span class="status-badge status-upcoming">UPCOMING</span>
+          <div style="margin-top: 8px;">Starts in 6 hours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Matches -->
+  <section class="cricket-matches" style="background: var(--surface); padding: 40px 20px; margin-top: 0;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <h2>Recently Completed</h2>
+      <div class="match-cards">
+        <!-- Completed Match 1 -->
+        <div class="match-card">
+          <span class="match-format t20">IPL 2024</span>
+          <div class="team-score">
+            <span class="team-name">Mumbai Indians</span>
+            <span class="team-runs">189/5 (20 ov)</span>
+          </div>
+          <div class="team-score">
+            <span class="team-name">Chennai Super Kings</span>
+            <span class="team-runs">176/8 (20 ov)</span>
+          </div>
+          <div class="match-status">
+            <span class="status-badge status-completed">COMPLETED</span>
+            <div style="margin-top: 8px;">MI wins by 13 runs</div>
+          </div>
+        </div>
+
+        <!-- Completed Match 2 -->
+        <div class="match-card">
+          <span class="match-format odi">ODI</span>
+          <div class="team-score">
+            <span class="team-name">New Zealand</span>
+            <span class="team-runs">245/8 (50 ov)</span>
+          </div>
+          <div class="team-score">
+            <span class="team-name">Bangladesh</span>
+            <span class="team-runs">223/9 (50 ov)</span>
+          </div>
+          <div class="match-status">
+            <span class="status-badge status-completed">COMPLETED</span>
+            <div style="margin-top: 8px;">NZ wins by 22 runs</div>
+          </div>
+        </div>
+
+        <!-- Completed Match 3 -->
+        <div class="match-card">
+          <span class="match-format t20">T20 LEAGUE</span>
+          <div class="team-score">
+            <span class="team-name">Delhi Capitals</span>
+            <span class="team-runs">168/7 (20 ov)</span>
+          </div>
+          <div class="team-score">
+            <span class="team-name">Rajasthan Royals</span>
+            <span class="team-runs">172/4 (19.2 ov)</span>
+          </div>
+          <div class="match-status">
+            <span class="status-badge status-completed">COMPLETED</span>
+            <div style="margin-top: 8px;">RR wins by 6 wickets</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cricket News -->
+  <section class="cricket-news">
+    <div class="container">
+      <h2>Latest Cricket News</h2>
+      <div class="news-articles">
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">Virat Kohli Announces Retirement from T20 Internationals</h3>
+            <p class="article-excerpt">The legendary batsman calls it a day after a stellar career in the shortest format of the game...</p>
+            <span class="article-date">2 hours ago</span>
+          </div>
+        </article>
+
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">India Squad Announced for World Cup 2025</h3>
+            <p class="article-excerpt">The BCCI has announced a strong 15-member squad for the upcoming Cricket World Cup with several surprises...</p>
+            <span class="article-date">4 hours ago</span>
+          </div>
+        </article>
+
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1504403634217-36d91bccc868?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">IPL 2025: Teams Release Their Retained Players List</h3>
+            <p class="article-excerpt">All 10 IPL franchises have revealed which players they are retaining ahead of the mega auction...</p>
+            <span class="article-date">6 hours ago</span>
+          </div>
+        </article>
+
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">Rohit Sharma Named India Captain for All Formats</h3>
+            <p class="article-excerpt">The BCCI has appointed Rohit Sharma as the captain across all three formats of international cricket...</p>
+            <span class="article-date">1 day ago</span>
+          </div>
+        </article>
+
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">Australia Wins Border-Gavaskar Trophy 2024</h3>
+            <p class="article-excerpt">Australia clinches the prestigious Test series against India with a dominant performance in the final match...</p>
+            <span class="article-date">2 days ago</span>
+          </div>
+        </article>
+
+        <article class="news-article">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&q=80" alt="Cricket News" class="article-image" />
+          <div class="article-content">
+            <h3 class="article-title">Women's Cricket: India Eyes Historic World Cup Victory</h3>
+            <p class="article-excerpt">The Indian women's cricket team gears up for the World Cup final with high hopes of bringing the trophy home...</p>
+            <span class="article-date">3 days ago</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <p>© 2024 SportHub Cricket. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

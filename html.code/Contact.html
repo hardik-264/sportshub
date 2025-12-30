@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sports Hub</title>
+  <meta name="description" content="Contact Sports Hub for press, support, or advertising inquiries." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css.code/Sports.css" />
+  <link rel="stylesheet" href="/css.code/Contact.css" />
+  
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        <span class="logo-text">SPORTS<span class="logo-highlight">HUB</span></span>
+      </a>
+      <nav class="nav">
+        <a href="Sports.html" class="nav-link">Home</a>
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Sports ▼</button>
+          <div class="dropdown-menu">
+            <a href="Cricket.html"><i class="fas fa-cricket"></i> Cricket</a>
+            <a href="Football.html"><i class="fas fa-football"></i> Football</a>
+            <a href="Hockey.html"><i class="fas fa-hockey-puck"></i> Hockey</a>
+            <a href="Badminton.html"><i class="fas fa-shuttlecock"></i> Badminton</a>
+            <a href="Tennis.html"><i class="fas fa-tennis"></i> Tennis</a>
+            <a href="#other"><i class="fas fa-trophy"></i> Other Sports</a>
+          </div>
+        </div>
+        <a href="Sports.html#news" class="nav-link">News</a>
+        <a href="Contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search teams, players, news...">
+        <button class="search-btn" onclick="handleSearch()"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="auth-buttons">
+        <a href="Login.html" class="btn btn-outline">Log in</a>
+        <a href="Signup.html" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contact-hero">
+    <div class="container contact-container">
+      <div class="contact-left">
+        <h1>Get in Touch</h1>
+        <p>Questions, press inquiries, advertising or support — we’re here to help.</p>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <strong>Email</strong>
+            <span>support@sportshub.example</span>
+          </div>
+          <div class="info-item">
+            <strong>Phone</strong>
+            <span>+91 9054763717</span>
+          </div>
+          <div class="info-item">
+            <strong>Address</strong>
+            <span>123 Stadium Ave, Sports City</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="contact-right">
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Sports Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContact(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const email = f.email.value.trim();
+      alert(`Thanks, ${name}! We'll contact you at ${email} soon.`);
+      f.reset();
+    }
+  </script>
+</body>
+</html>

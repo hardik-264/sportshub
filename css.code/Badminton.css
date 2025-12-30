@@ -1,0 +1,39 @@
+/* Badminton.css - Badminton Page Specific Styles */
+
+.badminton-hero {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+.badminton-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+.badminton-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+}
+
+.section-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-light);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .badminton-hero h1 {
+    font-size: 32px;
+  }
+}
