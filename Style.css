@@ -1088,3 +1088,510 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
   }
 }
+
+/* ===== CRICKET STYLES ===== */
+.cricket-hero {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.cricket-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cricket-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.cricket-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--surface-light);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.cricket-matches {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cricket-matches h2 {
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.match-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-light);
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
+}
+
+.match-format {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.match-format.t20 {
+  background: #f97316;
+}
+
+.match-format.odi {
+  background: #22c55e;
+}
+
+.match-format.test {
+  background: #8b5cf6;
+}
+
+.team-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--surface-light);
+}
+
+.team-score:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.team-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.team-runs {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.team-goals {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.match-status {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--surface-light);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.status-badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-live {
+  background: #ef4444;
+  color: white;
+}
+
+.status-upcoming {
+  background: var(--primary);
+  color: white;
+}
+
+.status-completed {
+  background: var(--surface-light);
+  color: var(--text-muted);
+}
+
+/* ===== FOOTBALL STYLES ===== */
+.football-hero {
+  background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.football-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.football-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+}
+
+.football-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.matches-section {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.matches-section h2 {
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+/* ===== HOCKEY STYLES ===== */
+.hockey-hero {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.hockey-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hockey-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.section-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-light);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* ===== TENNIS STYLES ===== */
+.tennis-hero {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.tennis-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.tennis-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+}
+
+/* ===== BADMINTON STYLES ===== */
+.badminton-hero {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.badminton-hero h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.badminton-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+}
+
+/* ===== CONTACT FORM STYLES ===== */
+.contact-hero {
+  padding: 56px 20px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-left h1 {
+  font-family: Oswald, Inter, Arial, sans-serif;
+  font-size: 36px;
+  margin: 0 0 12px;
+}
+
+.contact-left p {
+  color: var(--text-muted);
+  margin: 0 0 18px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.info-item strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.info-item span {
+  color: var(--text-muted);
+}
+
+.contact-right {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+  color: var(--text);
+  resize: vertical;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+  display: block;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== PAGE NAVIGATION & MODALS ===== */
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: none;
+  font-size: 24px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: -10px;
+}
+
+.close-btn:hover {
+  color: #666;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.modal p {
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.modal a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+.fab.fa-instagram{
+  color: #f20303;
+}
+.fab.fa-youtube{
+  color: rgba(255, 0, 0, 0.816);
+}
+.fab.fa-twitter{
+  color: #2505f3;
+}
+.fab.fa-facebook{
+  color: #1900f7;
+}
