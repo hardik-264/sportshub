@@ -1583,6 +1583,59 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+/* Save this as style.css */
+:root {
+  --primary: #667eea;
+  --dark: #0f172a;
+  --light: #f8fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light);
+}
+
+.page-section { display: none; padding: 100px 20px; }
+.page-section.active { display: block; }
+
+.header {
+  background: var(--dark);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-text { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: white; text-decoration: none; }
+.logo-highlight { color: var(--primary); }
+
+.nav-link { color: white; margin-left: 20px; text-decoration: none; }
+
+.btn-primary { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+.modal.active { display: flex; }
+.modal-content { background: white; padding: 2rem; border-radius: 8px; width: 400px; position: relative; }
+
+
 .fab.fa-instagram{
   color: #f20303;
 }
